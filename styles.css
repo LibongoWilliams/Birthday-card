@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	text-align: center;
+	background-color: orangered;
+}
+
+.birthday-card {
+	width: 90%;
+	padding: 25px;
+	background-color: white;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 12px;
+}
+
+.card-links {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+
+.card-links a {
+	width: 100%;
+	display: inline-block;
+	padding: 12px 20px;
+	background-color: midnightblue;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+.birthday-card p {
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+section {
+	width: 90%;
+	max-width: 700px;
+	background-color: whitesmoke;
+	margin: 0 auto;
+	border-radius: 6px;
+	display: none;
+}
+
+.birthday-card:hover {
+	background-color: yellow;
+}
+
+h1::before {
+	content:"🥳 ";
+}
+
+h1::after {
+	content:" 🥳";
+}
+
+.card-links a:hover {
+	background-color: crimson;
+}
+
+section:target {
+	display: block;
+}
+
+
+/* MEDIA QUERY for small screens */
+@media (max-width: 480px) {
+  .birthday-card p {
+    font-size: 1rem;
+  }
+
+  .card-links {
+    flex-direction: column; /* stack buttons */
+    gap: 10px;
+  }
+
+  .card-links a {
+    width: 100%; /* buttons fill card width */
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    max-width: none; /* let section shrink */
+  }
+
+  .birthday-card {
+  	margin-top: 30px;
+  	padding: 20px;
+  }
+
+  section {
+  	padding: 15px;
+  }
+}
